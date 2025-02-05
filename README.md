@@ -34,3 +34,9 @@ SimpleVO is a modular visual odometry frontend system that reconstructs a sparse
    cd /{path to workspace}/SimpleVO/docker
    ./build_and_run.sh
    ```
+
+## Contributors
+
+- Aakash Rohra
+- Arvind Chelvan
+- Veera Ragav
