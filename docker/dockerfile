@@ -1,7 +1,7 @@
 # Start from the official Ubuntu 22.04 base image
 FROM ubuntu:22.04
 
-# Prevent interactive dialogs (e.g., tzdata) from blocking builds
+# Prevent interactive dialogs from blocking builds
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update package lists, upgrade packages, and install some common tools
