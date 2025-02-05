@@ -1,0 +1,43 @@
+# Start from the official Ubuntu 22.04 base image
+FROM ubuntu:22.04
+
+# Set a label or metadata
+LABEL maintainer="Your Name <you@example.com>"
+
+# Prevent interactive dialogs (e.g., tzdata) from blocking builds
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update package lists, upgrade packages, and install some common tools
+RUN apt-get update && apt-get -y upgrade && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        wget \
+        vim \
+        git \
+        python3 \
+        python3-pip \
+        libgl1  \
+        libsm6          \ 
+      	libxext6        \ 
+      	libxrender-dev  \
+      	ffmpeg          \
+    && rm -rf /var/lib/apt/lists/*
+    
+# Install OpenCV (headless if no GUI needed)
+RUN pip3 install --no-cache-dir opencv-contrib-python open3d numpy scipy matplotlib
+
+# (Optional) Set a working directory
+# WORKDIR /app
+
+# (Optional) Copy your application code into the container
+# COPY . /app
+
+# (Optional) Install dependencies / build your application
+
+# Example: If you have a script to run on startup
+# CMD ["bash", "entrypoint.sh"]
+
+# If no specific command, you can leave the container at a shell
+CMD ["bash"]
+
