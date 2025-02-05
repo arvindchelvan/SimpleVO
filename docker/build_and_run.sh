@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Set Docker image name
 IMAGE_NAME="opencv-ubuntu"
-CONTAINER_NAME="sfm_container"
+CONTAINER_NAME="vo_container"
 DIR=$(dirname $(pwd))
-# Step 1: Build the Docker image
+
+# Build the Docker image
 echo "Building Docker image: $IMAGE_NAME..."
 docker build -t $IMAGE_NAME .
 
+# Run the Docker container
 xhost +
-# Step 2: Run the Docker container
-echo "Running container: $CONTAINER_NAME..."
+
 docker run -it --rm \
 	   --privileged \
 	   --network=host \
