@@ -31,7 +31,8 @@ SimpleVO is a modular visual odometry frontend system that reconstructs a sparse
 ## Build and Run Docker Container
 
    ```
-   cd /{path to workspace}/SimpleVO/docker
+   git clone git@github.com:arvindchelvan/SimpleVO.git
+   cd SimpleVO/docker
    ./build_and_run.sh
    ```
 
