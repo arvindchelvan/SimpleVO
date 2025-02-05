@@ -28,7 +28,7 @@ RUN apt-get update && apt-get -y upgrade && \
 RUN pip3 install --no-cache-dir opencv-contrib-python open3d numpy scipy matplotlib
 
 # (Optional) Set a working directory
-# WORKDIR /app
+WORKDIR /workspace/src
 
 # (Optional) Copy your application code into the container
 # COPY . /app
@@ -39,5 +39,5 @@ RUN pip3 install --no-cache-dir opencv-contrib-python open3d numpy scipy matplot
 # CMD ["bash", "entrypoint.sh"]
 
 # If no specific command, you can leave the container at a shell
-CMD ["bash"]
+CMD ["python3", "main.py"]
 
