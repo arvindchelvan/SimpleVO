@@ -1,6 +1,6 @@
 # SimpleVO
 
-SimpleVO is a modular visual odometry frontend system that reconstructs a sparse 3D point cloud from a sequence of images. It leverages feature extraction, feature matching, pose estimation, and triangulation to compute camera trajectories and generate a 3D representation of the scene.
+SimpleVO is a modular visual odometry frontend system that reconstructs a sparse 3D point cloud from a sequence of images. It performs feature extraction, feature matching, pose estimation, and triangulation to compute camera trajectories and generate a 3D scene representation.
 
 ## Modules
 
@@ -30,7 +30,7 @@ SimpleVO is a modular visual odometry frontend system that reconstructs a sparse
 
 ## Build and Run Docker Container
 
-   '''
+   ```
    cd /{path to workspace}/SimpleVO/docker
    ./build_and_run.sh
-   '''
+   ```
